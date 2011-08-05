@@ -1,0 +1,54 @@
+<h1>Facebook chat knockoff using Strophe.js and Sproutcore 2</h1>
+
+<a href="/sign_out">Sign out</a>
+
+<script src="js/libs/jquery-1.6.2.js"></script>
+<script src="js/libs/sproutcore.js"></script>
+
+<!-- Beginning of chat scripts -->
+<script src="js/libs/strophe.js"></script>
+<script src="js/libs/underscore.js"></script>
+<script src="js/libs/jquery.ba-tinypubsub.js"></script>
+<script src="js/libs/jquery.textarea-autogrow.js"></script>
+
+<script src="js/chat/client.js"></script>
+<script src="js/chat/app.js"></script>
+
+<script src="js/chat/models/user.js"></script>
+<script src="js/chat/models/resource.js"></script>
+<script src="js/chat/models/chat_tab.js"></script>
+<script src="js/chat/models/message.js"></script>
+<script src="js/chat/models/message_group.js"></script>
+
+<script src="js/chat/controllers/application.js"></script>
+<script src="js/chat/controllers/roster.js"></script>
+<script src="js/chat/controllers/chat_tabs.js"></script>
+
+<script src="js/chat/views/roster/friend.js"></script>
+<script src="js/chat/views/roster/friend_collection.js"></script>
+<script src="js/chat/views/roster/flyout.js"></script>
+<script src="js/chat/views/roster/layout.js"></script>
+
+<script src="js/chat/views/chat_tab/message.js"></script>
+<script src="js/chat/views/chat_tab/message_collection.js"></script>
+<script src="js/chat/views/chat_tab/message_group.js"></script>
+<script src="js/chat/views/chat_tab/message_group_collection.js"></script>
+<script src="js/chat/views/chat_tab/unread_messages_count.js"></script>
+<script src="js/chat/views/chat_tab/text_area.js"></script>
+<script src="js/chat/views/chat_tab/button.js"></script>
+<script src="js/chat/views/chat_tab/flyout.js"></script>
+<script src="js/chat/views/chat_tab/layout.js"></script>
+<script src="js/chat/views/chat_tab_collection.js"></script>
+
+<script src="js/chat/views/application.js"></script>
+
+<script type="text/html">{{view Chat.Views.Application}}</script>
+
+<script>
+  Chat.connect({
+      jid: '<%= user.name %>@localhost',
+      password: '<%= user.password %>',
+      debug: true
+  });
+</script>
+<!-- End of chat scripts -->
