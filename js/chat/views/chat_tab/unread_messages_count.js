@@ -1,12 +1,13 @@
 Chat.Views.ChatTab.UnreadMessagesCount = SC.View.extend({
     template: SC.Handlebars.compile(
-        '{{parentView.parentView.content.unreadMessagesCount}}'
+        '{{unreadMessagesCount}}'
     ),
     tagName: 'span',
     classNames: ['chat-tab-unread-messages'],
-    classNameBindings: ['hidden'],
+    isVisibleBinding: 'areUnreadMessagesPresent',
 
-    hidden: function () {
-        return this.getPath('parentView.parentView.content.unreadMessagesCount') === 0;
-    }.property('parentView.parentView.content.unreadMessagesCount').cacheable()
+    unreadMessagesCountBinding: 'parentView.parentView.content.unreadMessagesCount',
+    areUnreadMessagesPresent: function () {
+        return this.get('unreadMessagesCount') !== 0;
+    }.property('unreadMessagesCount').cacheable()
 });
