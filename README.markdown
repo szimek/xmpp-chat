@@ -1,5 +1,5 @@
 ## Introduction
-This is a Facebook chat clone written using [Strophe.js](http://strophe.im/strophejs/) and [Sproutcore 2](https://github.com/sproutcore/sproutcore20).
+This is a Facebook chat clone written using [Strophe.js](http://strophe.im/strophejs/) and [Ember.js](https://github.com/emberjs/ember.js).
 
 ## Installation
 First of all you'll need a XMPP server e.g. [ejabberd](http://ejabberd.im) that can be easily installed using homebrew or apt-get. The widget does not handle user registration or subscriptions - these features will most likely be managed by your web application. If you want to try it out you'll have to create XMPP accounts and subscriptions between them yourself. The easiest way to do it is to use any IM chat client or via command line interface of your XMPP server (`ejabberdctl`if you're using ejabberd).
