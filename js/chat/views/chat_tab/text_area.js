@@ -1,4 +1,4 @@
-Chat.Views.ChatTab.TextArea = SC.TextArea.extend({
+Chat.Views.ChatTab.TextArea = Ember.TextArea.extend({
     classNames: ['autogrow'],
 
     didInsertElement: function () {

@@ -1,4 +1,4 @@
-Chat.Models.User = SC.Object.extend({
+Chat.Models.User = Ember.Object.extend({
     // Default attribute values
     jid: null,
     subscription: 'none',
@@ -7,7 +7,6 @@ Chat.Models.User = SC.Object.extend({
     init: function () {
         // We have to initialize 'resources' inside init function,
         // because otherwise all User objects would use the same Set object
-        // TODO: Use SC.Set once this issue is fixed: https://github.com/sproutcore/sproutcore20/issues/103
         this.set('resources', []);
     },
 

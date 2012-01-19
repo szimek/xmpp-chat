@@ -1,4 +1,4 @@
-Chat.Controllers.roster = SC.ArrayProxy.create({
+Chat.Controllers.roster = Ember.ArrayProxy.create({
     content: [],
 
     online: function () {

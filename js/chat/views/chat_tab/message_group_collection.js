@@ -1,4 +1,4 @@
-Chat.Views.ChatTab.MessageGroupCollection = SC.CollectionView.extend({
+Chat.Views.ChatTab.MessageGroupCollection = Ember.CollectionView.extend({
     itemViewClass: Chat.Views.ChatTab.MessageGroup,
     classNames: ['message-list'],
     contentBinding: 'parentView.parentView.content.messageGroups',

@@ -1,17 +1,19 @@
-Chat.Views.ChatTab.Message = SC.View.extend({
-    template: SC.Handlebars.compile(
+Chat.Views.ChatTab.Message = Ember.View.extend({
+    template: Ember.Handlebars.compile(
         '{{content.body}}'
     ),
 
     classNames: ['chat-message'],
 
     willInsertElement: function () {
-        var messageGroupCollectionView = this.parentView.parentView.parentView;
-        messageGroupCollectionView.onWillInsertMessageView();
+        this.messageGroupCollectionView().onWillInsertMessageView();
     },
 
     didInsertElement: function () {
-        var messageGroupCollectionView = this.parentView.parentView.parentView;
-        messageGroupCollectionView.onDidInsertMessageView();
+        this.messageGroupCollectionView().onDidInsertMessageView();
+    },
+
+    messageGroupCollectionView: function () {
+        return this.getPath('collectionView.collectionView');
     }
 });

@@ -1,5 +1,5 @@
-Chat.Views.ChatTab.Button = SC.View.extend({
-    template: SC.Handlebars.compile(
+Chat.Views.ChatTab.Button = Ember.View.extend({
+    template: Ember.Handlebars.compile(
         '<div class="chat-button-content clearfix">'
       +   '<div class="chat-button-options right clearfix">'
       +     '<label class="chat-button-action close"><input type="button"></label>'

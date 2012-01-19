@@ -1,5 +1,5 @@
-Chat.Views.ChatTab.UnreadMessagesCount = SC.View.extend({
-    template: SC.Handlebars.compile(
+Chat.Views.ChatTab.UnreadMessagesCount = Ember.View.extend({
+    template: Ember.Handlebars.compile(
         '{{unreadMessagesCount}}'
     ),
     tagName: 'span',

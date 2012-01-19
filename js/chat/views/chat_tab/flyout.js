@@ -1,5 +1,5 @@
-Chat.Views.ChatTab.Flyout = SC.View.extend({
-    template: SC.Handlebars.compile(
+Chat.Views.ChatTab.Flyout = Ember.View.extend({
+    template: Ember.Handlebars.compile(
         '<div class="chat-flyout-titlebar clearfix">'
       +   '<div class="titlebar-text-wrapper">'
       +     '<span class="titlebar-text">{{parentView.content.friend.name}}</span>'

@@ -1,4 +1,4 @@
-Chat.Models.MessageGroup = SC.Object.extend({
+Chat.Models.MessageGroup = Ember.Object.extend({
     from: null,
 
     init: function () {

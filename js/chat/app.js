@@ -1,4 +1,4 @@
-var Chat = window.Chat = SC.Application.create({
+var Chat = window.Chat = Ember.Application.create({
     connect: function (options) {
         Chat.Controllers.application.connect(options);
     },

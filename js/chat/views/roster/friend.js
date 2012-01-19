@@ -1,7 +1,7 @@
-Chat.Views.Roster.Friend = SC.View.extend({
-    template: SC.Handlebars.compile(
+Chat.Views.Roster.Friend = Ember.View.extend({
+    template: Ember.Handlebars.compile(
         '</img>'
-      + '{{content.name}}'
+      + '<span>{{content.name}}</span>'
     ),
     tagName: 'a',
     classNames: ['chat-friend', 'clearfix'],

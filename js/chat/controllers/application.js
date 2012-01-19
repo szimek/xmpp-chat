@@ -1,4 +1,4 @@
-Chat.Controllers.application = SC.Object.create({
+Chat.Controllers.application = Ember.Object.create({
     debug: false,
 
     connect: function (options) {
@@ -56,9 +56,9 @@ Chat.Controllers.application = SC.Object.create({
             } else {
                 if (model) {
                     // Update user in the roster
-                    // TODO: figure out SC.Object#set for multiple properties
+                    // TODO: figure out Ember.Object#set for multiple properties
                     model.beginPropertyChanges();
-                    SC.keys(friend).forEach(function (key) {
+                    Ember.keys(friend).forEach(function (key) {
                         model.set(key, friend[key]);
                     });
                     model.endPropertyChanges();

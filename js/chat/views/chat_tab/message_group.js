@@ -1,5 +1,5 @@
-Chat.Views.ChatTab.MessageGroup = SC.View.extend({
-    template: SC.Handlebars.compile(
+Chat.Views.ChatTab.MessageGroup = Ember.View.extend({
+    template: Ember.Handlebars.compile(
         '<a class="left" href="#" >'
       +   '<img class="profile-photo" src="/images/chat/fb_avatar.png" {{bindAttr title="from"}} />'
       + '</a>'

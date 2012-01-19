@@ -1,4 +1,4 @@
-Chat.Models.Message = SC.Object.extend({
+Chat.Models.Message = Ember.Object.extend({
     from: null,
     to: null,
     body: null,

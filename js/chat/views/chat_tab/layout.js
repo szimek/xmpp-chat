@@ -1,5 +1,5 @@
-Chat.Views.ChatTab.Layout = SC.View.extend({
-    template: SC.Handlebars.compile(
+Chat.Views.ChatTab.Layout = Ember.View.extend({
+    template: Ember.Handlebars.compile(
         '{{view Chat.Views.ChatTab.Button}}'
       + '{{view Chat.Views.ChatTab.Flyout}}'
     ),

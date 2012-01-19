@@ -1,4 +1,4 @@
-Chat.Controllers.chatTabs = SC.ArrayProxy.create({
+Chat.Controllers.chatTabs = Ember.ArrayProxy.create({
     content: [],
 
     activateTabFor: function (friend) {

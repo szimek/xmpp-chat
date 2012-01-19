@@ -1,4 +1,4 @@
-Chat.Views.Application = SC.ContainerView.extend({
+Chat.Views.Application = Ember.ContainerView.extend({
     childViews: [
         Chat.Views.ChatTabCollection,
         Chat.Views.Roster.Layout

@@ -1,5 +1,5 @@
-Chat.Views.Roster.Layout = SC.View.extend({
-    template: SC.Handlebars.compile(
+Chat.Views.Roster.Layout = Ember.View.extend({
+    template: Ember.Handlebars.compile(
         '<a href="#" rel="toggle" class="chat-button">'
       +   '<div class="chat-button-rule">'
       +     '<div class="image-block clearfix">'

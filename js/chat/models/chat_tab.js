@@ -1,4 +1,4 @@
-Chat.Models.ChatTab = SC.Object.extend({
+Chat.Models.ChatTab = Ember.Object.extend({
     user: null,
     isActive: false,
     unreadMessagesCount: '0',
