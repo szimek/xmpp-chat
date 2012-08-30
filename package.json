@@ -2,7 +2,9 @@
     "name": "xmpp-bosh-interface-proxy"
   , "version": "1.0.0"
   , "dependencies": {
-        "express": "3.0.0beta2"
-      , "http-proxy": "0.8.1"
+        "express": "3.0.0rc3"
+      , "ejs": "0.8.2"
+      , "express-partials": "0.0.5"
+      , "http-proxy": "0.8.2"
     }
 }

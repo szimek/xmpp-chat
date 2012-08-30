@@ -3,9 +3,10 @@
 
 var util = require('util'),
     express = require('express'),
+    partials = require('express-partials'),
     httpProxy = require('http-proxy');
 
-var app = express.createServer(),
+var app = express(),
     proxy = new httpProxy.HttpProxy({
         target: {
             host: 'localhost',
@@ -15,6 +16,7 @@ var app = express.createServer(),
 
 app.configure(function() {
     app.use(express.static(__dirname));
+    app.use(partials());
     app.use(express.bodyParser());
     app.use(express.cookieParser());
     app.use(express.session({secret: 'f7cd7374c2851fb727582bf'}));

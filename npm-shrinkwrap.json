@@ -3,50 +3,73 @@
   "version": "1.0.0",
   "dependencies": {
     "express": {
-      "version": "3.0.0beta2",
+      "version": "3.0.0rc3",
       "dependencies": {
         "connect": {
-          "version": "2.3.1",
+          "version": "2.4.3",
           "dependencies": {
             "qs": {
               "version": "0.4.2"
             },
-            "mime": {
-              "version": "1.2.4"
-            },
             "formidable": {
-              "version": "1.0.9"
+              "version": "1.0.11"
+            },
+            "bytes": {
+              "version": "0.1.0"
+            },
+            "pause": {
+              "version": "0.0.1"
             }
           }
         },
         "commander": {
           "version": "0.6.1"
         },
-        "mime": {
-          "version": "1.2.5"
+        "range-parser": {
+          "version": "0.0.4"
         },
         "mkdirp": {
-          "version": "0.3.2"
+          "version": "0.3.3"
         },
         "cookie": {
-          "version": "0.0.3"
+          "version": "0.0.4"
         },
         "crc": {
           "version": "0.2.0"
+        },
+        "fresh": {
+          "version": "0.1.0"
+        },
+        "methods": {
+          "version": "0.0.1"
+        },
+        "send": {
+          "version": "0.0.3",
+          "dependencies": {
+            "mime": {
+              "version": "1.2.6"
+            }
+          }
         },
         "debug": {
           "version": "0.7.0"
         }
       }
     },
+    "ejs": {
+      "version": "0.8.2"
+    },
+    "express-partials": {
+      "version": "0.0.5"
+    },
     "http-proxy": {
-      "version": "0.8.1",
+      "version": "0.8.2",
       "dependencies": {
         "colors": {
           "version": "0.6.0-1"
         },
         "optimist": {
-          "version": "0.2.8",
+          "version": "0.3.4",
           "dependencies": {
             "wordwrap": {
               "version": "0.0.2"
