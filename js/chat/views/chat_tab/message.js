@@ -1,6 +1,6 @@
 Chat.Views.ChatTab.Message = Ember.View.extend({
     template: Ember.Handlebars.compile(
-        '{{content.body}}'
+        '{{view.content.body}}'
     ),
 
     classNames: ['chat-message'],
@@ -14,6 +14,6 @@ Chat.Views.ChatTab.Message = Ember.View.extend({
     },
 
     messageGroupCollectionView: function () {
-        return this.getPath('collectionView.collectionView');
+        return this.get('parentView.parentView.parentView');
     }
 });

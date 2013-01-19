@@ -5,7 +5,7 @@ Chat.Views.Roster.Layout = Ember.View.extend({
       +     '<div class="image-block clearfix">'
       +       '<img class="image-block-image icon" src="/images/empty.gif" width="1" height="1"/>'
       +       '<div class="image-block-content chat-button-content clearfix">'
-      +         '<span class="label">Chat <span>(<strong class="count">{{onlineFriendCount}}</strong>)</span></span>'
+      +         '<span class="label">Chat <span>(<strong class="count">{{view.onlineFriendCount}}</strong>)</span></span>'
       +       '</div>'
       +     '</div>'
       +   '</div>'
@@ -19,11 +19,11 @@ Chat.Views.Roster.Layout = Ember.View.extend({
 
     // TODO: use state chart for this?
     onlineFriendCount: function () {
-        var count = this.getPath('Chat.Controllers.roster.online.length'),
-            presence = this.getPath('Chat.Controllers.application.user.presence');
+        var count = Chat.Controllers.roster.get('online.length'),
+            presence = Chat.Controllers.application.get('user.presence');
 
         return presence === 'unavailable' ? 'Offline' : count;
-    }.property('Chat.Controllers.roster.online.length', 'Chat.Controllers.application.user.presence').cacheable(),
+    }.property('Chat.Controllers.roster.online.length', 'Chat.Controllers.application.user.presence'),
 
     // TODO: split it into 2 views - button and flyout and just use 'click' on button
     didInsertElement: function () {

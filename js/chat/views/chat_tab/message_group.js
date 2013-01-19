@@ -3,7 +3,7 @@ Chat.Views.ChatTab.MessageGroup = Ember.View.extend({
         '<a class="left" href="#" >'
       +   '<img class="profile-photo" src="/images/chat/fb_avatar.png" {{bindAttr title="from"}} />'
       + '</a>'
-      + '<div class="chat-message-group-metainfo">{{timestamp}}</div>'
+      + '<div class="chat-message-group-metainfo">{{view.timestamp}}</div>'
       + '{{collection Chat.Views.ChatTab.MessageCollection}}'
     ),
     classNames: ['chat-message-group clearfix'],
@@ -11,14 +11,14 @@ Chat.Views.ChatTab.MessageGroup = Ember.View.extend({
     'data-chat-message-fromBinding': 'content.from',
 
     from: function () {
-        var from = this.getPath('content.from'),
-            you  = this.getPath('Chat.Controllers.application.user.jid');
+        var from = this.get('content.from'),
+            you  = Chat.Controllers.application.get('user.jid');
         return from === you ? 'You' : from;
-    }.property('content.from').cacheable(),
+    }.property('content.from'),
 
     timestamp: function () {
         function pad(n) { return n < 10 ? '0' + n : n; }
-        var createdAt = this.getPath('content.messages.firstObject.createdAt');
+        var createdAt = this.get('content.messages.firstObject.createdAt');
         return pad(createdAt.getHours()) + ':' + pad(createdAt.getMinutes());
-    }.property().cacheable()
+    }.property()
 });

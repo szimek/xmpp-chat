@@ -1,13 +1,16 @@
 Chat.Views.ChatTab.UnreadMessagesCount = Ember.View.extend({
     template: Ember.Handlebars.compile(
-        '{{unreadMessagesCount}}'
+        '{{view.unreadMessagesCount}}'
     ),
     tagName: 'span',
     classNames: ['chat-tab-unread-messages'],
+
+    // Order of bindings is important here.
+    // See https://github.com/emberjs/ember.js/issues/1164
+    unreadMessagesCountBinding: 'parentView.parentView.content.unreadMessagesCount',
     isVisibleBinding: 'areUnreadMessagesPresent',
 
-    unreadMessagesCountBinding: 'parentView.parentView.content.unreadMessagesCount',
     areUnreadMessagesPresent: function () {
         return this.get('unreadMessagesCount') !== 0;
-    }.property('unreadMessagesCount').cacheable()
+    }.property('unreadMessagesCount')
 });

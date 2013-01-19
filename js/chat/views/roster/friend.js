@@ -1,7 +1,7 @@
 Chat.Views.Roster.Friend = Ember.View.extend({
     template: Ember.Handlebars.compile(
         '</img>'
-      + '<span>{{content.name}}</span>'
+      + '<span>{{view.content.name}}</span>'
     ),
     tagName: 'a',
     classNames: ['chat-friend', 'clearfix'],
@@ -12,7 +12,7 @@ Chat.Views.Roster.Friend = Ember.View.extend({
         'data-chat-status',
         'data-chat-subscription'
     ],
-    
+
     href: '#',
     'data-chat-jidBinding': 'content.jid',
     'data-chat-presenceBinding': 'content.presence',

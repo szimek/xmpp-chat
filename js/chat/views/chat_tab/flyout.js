@@ -2,7 +2,7 @@ Chat.Views.ChatTab.Flyout = Ember.View.extend({
     template: Ember.Handlebars.compile(
         '<div class="chat-flyout-titlebar clearfix">'
       +   '<div class="titlebar-text-wrapper">'
-      +     '<span class="titlebar-text">{{parentView.content.friend.name}}</span>'
+      +     '<span class="titlebar-text">{{view.parentView.content.friend.name}}</span>'
       +   '</div>'
       +   '<div class="chat-button-options right"></div>'
       + '</div>'
@@ -24,7 +24,7 @@ Chat.Views.ChatTab.Flyout = Ember.View.extend({
         }, this));
 
         this.$('.chat-flyout-titlebar').click(_.bind(function (event) {
-            var tab = this.getPath('parentView.content');
+            var tab = this.get('parentView.content');
             Chat.Controllers.chatTabs.toggleTabActiveState(tab);
             return false;
         }, this));

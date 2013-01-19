@@ -11,7 +11,7 @@ Chat.Views.ChatTab.TextArea = Ember.TextArea.extend({
         if (event.which === 13) {
             event.preventDefault();
 
-            var tab = this.getPath('parentView.parentView.content'),
+            var tab = this.get('parentView.parentView.content'),
                 body = this.get('value'),
                 user = tab.get('user'),
                 friend = tab.get('friend'),
@@ -35,7 +35,7 @@ Chat.Views.ChatTab.TextArea = Ember.TextArea.extend({
     },
 
     focus: function () {
-        if (this.getPath('parentView.isVisible')) {
+        if (this.get('parentView.isVisible')) {
             // This observer is called before the observer of the parent view
             // that toggles its visiblity, so we have to wait a bit
             window.setTimeout(_.bind(function () {
