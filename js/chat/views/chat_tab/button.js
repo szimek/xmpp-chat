@@ -24,5 +24,5 @@ Chat.Views.ChatTab.Button = Ember.View.extend({
 
     isActive: function () {
         return !this.getPath('parentView.content.isActive');
-    }.property('parentView.content.isActive').cacheable()
+    }.property('parentView.content.isActive')
 });

@@ -3,7 +3,8 @@
 <a href="/sign_out">Sign out</a>
 
 <script src="js/libs/jquery-1.9.0.js"></script>
-<script src="js/libs/ember-0.9.3.min.js"></script>
+<script src="js/libs/handlebars-1.0.rc.2.js"></script>
+<script src="js/libs/ember-1.0.0-pre.4.js"></script>
 
 <!-- Beginning of chat scripts -->
 <script src="js/libs/strophe.min.js"></script>
@@ -42,7 +43,7 @@
 
 <script src="js/chat/views/application.js"></script>
 
-<script type="text/html">{{view Chat.Views.Application}}</script>
+<script type="text/x-handlebars">{{view Chat.Views.Application}}</script>
 
 <script>
   Chat.connect({
