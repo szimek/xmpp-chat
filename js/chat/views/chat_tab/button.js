@@ -24,5 +24,17 @@ Chat.Views.ChatTab.Button = Ember.View.extend({
 
     isActive: function () {
         return !this.get('parentView.content.isActive');
-    }.property('parentView.content.isActive')
+    }.property('parentView.content.isActive'),
+
+    click: function (event) {
+        var tabs = Chat.Controllers.chatTabs,
+            content = this.get('parentView').content;
+
+        if ($(event.target).is('.close input')) {
+            tabs.removeTab(content);
+        } else {
+            tabs.toggleTabActiveState(content);
+        }
+        return false;
+    }
 });
