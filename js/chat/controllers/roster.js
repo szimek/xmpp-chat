@@ -1,4 +1,4 @@
-Chat.Controllers.Roster = Ember.ArrayProxy.extend({
+Chat.Controllers.Roster = Ember.ArrayController.extend({
     content: [],
 
     online: function () {

@@ -1,9 +1,9 @@
-Chat.Controllers.chatTabs = Ember.ArrayProxy.create({
+Chat.Controllers.ChatTabs = Ember.ArrayController.extend({
     content: [],
 
     activateTabFor: function (friend) {
         var tab = this.content.find(function (item) {
-            return item.getPath('friend.jid') === friend.get('jid');
+            return item.get('friend.jid') === friend.get('jid');
         });
 
         if (!tab) {
@@ -59,7 +59,7 @@ Chat.Controllers.chatTabs = Ember.ArrayProxy.create({
             message.direction = 'incoming';
 
             tab = this.find(function (tab) {
-                return tab.getPath('friend.jid') === friend.get('jid');
+                return tab.get('friend.jid') === friend.get('jid');
             });
 
             // Create a new tab if there isn't one already,
@@ -80,3 +80,5 @@ Chat.Controllers.chatTabs = Ember.ArrayProxy.create({
         }
     }
 });
+
+Chat.Controllers.chatTabs = Chat.Controllers.ChatTabs.create();

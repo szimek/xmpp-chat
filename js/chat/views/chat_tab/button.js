@@ -5,7 +5,7 @@ Chat.Views.ChatTab.Button = Ember.View.extend({
       +     '<label class="chat-button-action close"><input type="button"></label>'
       +   '</div>'
       +   '<div class="wrapper">'
-      +     '<div class="wrap"><div class="name">{{parentView.content.friend.name}}</div></div>'
+      +     '<div class="wrap"><div class="name">{{view.parentView.content.friend.name}}</div></div>'
       +     '{{view Chat.Views.ChatTab.UnreadMessagesCount}}'
       +   '</div>'
       + '</div>'
@@ -23,6 +23,6 @@ Chat.Views.ChatTab.Button = Ember.View.extend({
     isVisibleBinding: 'isActive',
 
     isActive: function () {
-        return !this.getPath('parentView.content.isActive');
+        return !this.get('parentView.content.isActive');
     }.property('parentView.content.isActive')
 });

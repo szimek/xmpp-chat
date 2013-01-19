@@ -1,4 +1,4 @@
-Chat.Controllers.application = Ember.Object.create({
+Chat.Controllers.Application = Ember.Object.extend({
     debug: false,
 
     connect: function (options) {
@@ -109,3 +109,5 @@ Chat.Controllers.application = Ember.Object.create({
         this.client.message(message.get('to'), message.get('body'));
     }
 });
+
+Chat.Controllers.application = Chat.Controllers.Application.create();

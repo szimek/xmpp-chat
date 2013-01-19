@@ -43,6 +43,6 @@ Chat.Models.ChatTab = Ember.Object.extend({
             // last group is from other user than the new message
             (group && group.get('from') !== sender) ||
             // last message was created more than 5 minutes ago
-            (group && (Date.now() - group.getPath('messages.lastObject.createdAt').valueOf() > 5*60*1000));
+            (group && (Date.now() - group.get('messages.lastObject.createdAt').valueOf() > 5*60*1000));
     }
 });
